@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !/public
+RewriteCond %{REQUEST_URI} !/gallery
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]

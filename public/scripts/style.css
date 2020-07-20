@@ -1,0 +1,350 @@
+*
+{    
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.699);
+}
+
+html, body
+{
+    background: #f6f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.164);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    padding: 8px 0;
+}
+
+header, main
+{
+    width: calc(100% - 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header>div, main>div
+{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.no-outline, .no-outline:hover, .no-outline:active
+{
+    outline: none;
+}
+
+.button
+{
+    margin: 3px;
+    cursor: pointer;
+    padding: 10px 25px;
+    opacity: .8;
+    border-radius: 7px;
+}
+
+.button:hover
+{
+    opacity: 1;
+}
+
+.button.button-primary
+{
+    border: 1px solid #1c73e7;
+    background: #1c73e7;
+    color: white;
+}
+
+.button.button-secondary
+{
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    background: white ;
+    color: #1c73e7;
+}
+
+#root_container
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#root_container>div>div:last-child
+{    
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.205);
+    background: white;
+    border-radius: 10px;
+}
+
+.screen_title
+{
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+/* ---------------Upload Interface--------------- */
+#upload_container
+{
+    background: #e8f0fd;
+    overflow: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 22px 3%;
+}
+
+#upload_container>div
+{
+    float: left;
+    padding: 10px;
+}
+
+#upload_container>div:first-child
+{
+    width:calc(30% - 20px);
+    font-weight: bold;
+}
+#upload_container>div:last-child
+{
+    width:calc(70% - 20px);
+}
+
+#upload_container input
+{
+    display: none;
+}
+
+#upload_container span.browse_file
+{
+    color: #3a7ad4;
+    cursor: pointer;
+}
+
+#upload_container span.browse_file:hover
+{
+    text-decoration: underline;
+}
+
+#upload_interface
+{
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    border: 1px dashed rgba(0, 0, 0, 0.384);
+    padding: 3%;
+}
+
+#upload_interface.is_over
+{
+    border: 2px dashed rgba(0, 0, 0, 0.466);
+}
+
+
+/* ---------------Media grid--------------- */
+#grid_container
+{
+    overflow: auto;
+    padding: 3%;
+}
+
+#grid_container>h2
+{
+    padding-left: 10px;
+}
+
+#grid_container>div
+{
+    margin: 10px;
+    width: calc(33.333% - 28px);
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.466);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#grid_container>div>span
+{
+    display: block;
+    border-top: 1px solid gray;
+    padding: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#grid_container>div:hover, #grid_container>div:hover span
+{
+    border-color: #3a7ad4;
+    color: #3a7ad4;
+}
+#grid_container>div:hover span
+{
+    background-color: #e8f0fd;
+}
+
+#grid_container>div>img
+{
+    width: calc(100% - 18px);
+    height: 150px;
+    margin: 9px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Single Media Editor */
+#single_media
+{
+    padding: 3% 10%;
+}
+
+#single_media>canvas
+{
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* --------Navigation Container-------- */
+#nav_container
+{
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 10px;
+    overflow: auto;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#nav_container>div
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 33.333333%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+#nav_container>div.active
+{
+    background: #ebefff;
+    border-radius: 10px;
+}
+
+/* -----------Filter Editor----------- */
+#filter_editor
+{
+    overflow: auto;
+}
+
+#filter_editor>div
+{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    width: calc(25% - 22px);
+    text-align: center;
+    float: left;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#filter_editor>div.active
+{
+    border: 1px solid gray;
+}
+
+#filter_editor>div>canvas
+{
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* -----------Adjustment Parameter----------- */
+#adjustment_editor
+{
+    overflow: auto;
+}
+
+#adjustment_editor>div
+{
+    padding: 5px;
+    width: calc(50% - 10px);
+    float: left;
+}
+
+#adjustment_editor>div>div
+{
+    white-space: nowrap;
+    float: left;
+}
+
+#adjustment_editor>div>div:first-child
+{
+    width: 35%;
+}
+
+#adjustment_editor>div>div:last-child
+{
+    width: 65%;
+}
+
+/* -----------------Crop Editor----------------- */
+#crop_editor>div
+{
+    overflow: auto;
+}
+
+#crop_editor>div>div
+{
+    float: left;
+}
+
+#crop_editor>div>div:first-child
+{
+    width: 30%;
+}
+
+#crop_editor>div>div:last-child
+{
+    width: 70%;
+}
+
+#crop_editor>div>div>div>div
+{
+    border: 1px solid gray;
+    padding: 7px 12px;
+    display: inline-block;
+    margin: 12px 5px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+#crop_editor>div>div>div>div.active
+{
+    border: 1px solid rgb(88, 147, 235);
+    color: rgb(88, 147, 235);
+}
+
+
+/* -------------Action Button Segment------------- */
+#action_button_container
+{
+    text-align: right;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+#action_button_container .revert-button
+{
+    float: left;
+}
