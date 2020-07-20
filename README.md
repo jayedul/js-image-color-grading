@@ -1,3 +1,7 @@
+This app doesn't use external Library/Framework.
+Javascript coding structure might seem like little bit React.js, but it's totally vanilla.
+And the backend structure is similar to Laravel, however that is also raw PHP.
+
 I've used some ES6 syntax in Javascript codes. So a modern web browser is recommended to check with.
 
 The PHP version I worked on is 7.4.0
