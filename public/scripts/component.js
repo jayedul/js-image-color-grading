@@ -4,9 +4,10 @@
 const Upload=function(goBackToHome)
 {
     this.DOM=el('div', {id:'upload_container'});
+    this.loading_text=null;
 
     // Upload file to the server and refresh the list
-    this.uploadFiles=function(f)
+    this.uploadFiles=f=>
     {
         if(f.length==0){return;}
 
@@ -21,9 +22,14 @@ const Upload=function(goBackToHome)
         var form = new FormData();
         form.append('new_media', f[0], f[0].filename);
 
+        // Show loading text
+        this.loading_text.setAttribute('class', 'd-block');
+
         // Send to server
         ajaxRequest('uploadFile', form, r=>
         {
+            this.loading_text.setAttribute('class', 'd-none');
+
             if(r.status!=='success')
             {
                 alert('Something Went Wrong.');
@@ -65,6 +71,7 @@ const Upload=function(goBackToHome)
         var upload = el('div', {id:'upload_interface'});
         var browser = el('span', {class:'browse_file'}, ' Browse for Files');
         var input = el('input', {type:'file', accept:'image/*'});
+        var loading = el('span', {class:'d-none'}, 'Uploading . . .');
 
         // Add event listeners
         browser.addEventListener('click', function(){input.click();});
@@ -77,11 +84,13 @@ const Upload=function(goBackToHome)
         upload.appendChild(el('span', {}, 'Drag and Drop or '));
         upload.appendChild(browser);
         upload.appendChild(input);
+        upload.appendChild(loading);
         upload_container.appendChild(upload)
 
         // Append DOM to root upload container
         this.DOM.appendChild(title);
         this.DOM.appendChild(upload_container);
+        this.loading_text=loading;
 
         return this.DOM;
     }

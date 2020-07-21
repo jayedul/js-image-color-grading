@@ -3,7 +3,8 @@
     // Automatically load dependency classes file
     spl_autoload_register(function ($class_name) 
     {
-        include $class_name.'.php';
+        $path = str_replace('\\', DIRECTORY_SEPARATOR, $class_name).'.php';
+        include __DIR__.DIRECTORY_SEPARATOR.$path;
     });
 
 

@@ -46,7 +46,7 @@
                         // This one could be more dynamic like passing payload data to view
                         // However it's not necessary in this basic app. Just pass the html.
                         header('Content-Type: text/html');
-                        include_once('app/view/'.$response['template'].'.php');
+                        include_once('App/View/'.$response['template'].'.php');
                     }
                     else
                     {

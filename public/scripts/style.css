@@ -32,6 +32,16 @@ header>div, main>div
     margin: 0 auto;
 }
 
+.d-block
+{
+    display: block;
+}
+
+.d-none
+{
+    display: none;
+}
+
 .no-outline, .no-outline:hover, .no-outline:active
 {
     outline: none;
